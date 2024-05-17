@@ -1,3 +1,4 @@
+import os
 import sys
 import rclpy
 from rclpy.node import Node
@@ -81,6 +82,9 @@ if len(sys.argv)>3:
 output_dir = "docs/data/logging/"
 if n_freshness_samples == 1:
     output_dir = "docs/data/logging_tcp/"
+# Ensure the directory exists
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
 output_config_filename = output_dir + str(start_time) + "_" + network + "_" + str(sensing_rate) + "_config_parameters.txt"
 output_log_filename = output_dir + str(start_time) + "_" + network + "_" + str(sensing_rate) + "_logging.csv"
 
