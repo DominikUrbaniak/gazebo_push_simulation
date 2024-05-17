@@ -50,17 +50,18 @@ execution_time = 0.0
  #for backing up when cube target reached
 
 n_speed_values = 1000
-#config_filename = 'src/main_pkg/config/sim_translation.ini'
+config_filename = 'src/main_pkg/config/sim_translation.ini'
 # Assuming the script is located in the main_pkg package
-config_filename = os.path.join(os.getenv('ROS_PACKAGE_PATH'), 'src/main_pkg/config/sim_translation.ini')
+#config_filename = os.path.join(os.getenv('ROS_PACKAGE_PATH'), 'src/main_pkg/config/sim_translation.ini')
 
-if os.path.exists(config_filename):
-    print(f"Configuration file found: {config_filename}")
-else:
-    print(f"Configuration file not found: {config_filename}")
+#if os.path.exists(config_filename):
+#    print(f"Configuration file found: {config_filename}")
+#else:
+#    print(f"Configuration file not found: {config_filename}")
 #config = read_config(config_filename)
 config = configparser.ConfigParser()
 config.read(config_filename)
+print(f'config.read: {config}')
 section = 'General'
 config_sec = config[section]
 go_const_vel = config_sec.getboolean('go_const_vel', True)
