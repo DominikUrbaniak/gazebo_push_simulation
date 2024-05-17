@@ -1,4 +1,3 @@
-import os
 import sys
 import rclpy
 from rclpy.node import Node
@@ -52,17 +51,6 @@ execution_time = 0.0
 n_speed_values = 1000
 config_filename = 'src/main_pkg/config/sim_translation.ini'
 # Assuming the script is located in the main_pkg package
-#config_filename = os.path.join(os.getenv('ROS_PACKAGE_PATH'), 'src/main_pkg/config/sim_translation.ini')
-
-#if os.path.exists(config_filename):
-#    print(f"Configuration file found: {config_filename}")
-#else:
-#    print(f"Configuration file not found: {config_filename}")
-with open('test_013.txt', 'w') as file:
-    # Write a sample line to the file
-    file.write('This is a test file named test_013.txt\n')
-
-print("File test_013.txt has been created in the current working directory.")
 #config = read_config(config_filename)
 config = configparser.ConfigParser()
 config.read(config_filename)
