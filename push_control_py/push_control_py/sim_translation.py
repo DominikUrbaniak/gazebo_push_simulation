@@ -49,7 +49,7 @@ execution_time = 0.0
  #for backing up when cube target reached
 
 n_speed_values = 1000
-config_filename = 'src/main_pkg/config/sim_translation.ini'
+config_filename = 'src/gazebo_push_simulation/main_pkg/config/sim_translation.ini'
 # Assuming the script is located in the main_pkg package
 #config = read_config(config_filename)
 config = configparser.ConfigParser()
