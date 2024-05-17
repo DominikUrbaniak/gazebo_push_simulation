@@ -58,6 +58,11 @@ config_filename = 'src/main_pkg/config/sim_translation.ini'
 #    print(f"Configuration file found: {config_filename}")
 #else:
 #    print(f"Configuration file not found: {config_filename}")
+with open('test_013.txt', 'w') as file:
+    # Write a sample line to the file
+    file.write('This is a test file named test_013.txt\n')
+
+print("File test_013.txt has been created in the current working directory.")
 #config = read_config(config_filename)
 config = configparser.ConfigParser()
 config.read(config_filename)
